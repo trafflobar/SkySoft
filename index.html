@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SkySoft AI Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0b0f1a; --card:#10182a; --edge:#1a2340; --muted:#8aa0c6; --text:#e9efff;
+      --acc:#6be3a7; --acc2:#8ecbff; --warn:#ffd46b;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;color:var(--text);background:
+      radial-gradient(900px 600px at 85% -10%, rgba(142,203,255,.20), transparent),
+      radial-gradient(1200px 800px at -10% 120%, rgba(107,227,167,.12), transparent),
+      linear-gradient(180deg,#070b14,#0b0f1a)}
+    .wrap{max-width:1150px;margin:0 auto;padding:28px 20px 80px}
+
+    header{display:flex;align-items:center;gap:16px;margin-bottom:22px}
+    .logo{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;
+      background:linear-gradient(135deg,var(--acc),var(--acc2));color:#08111f;font-weight:900}
+    h1{font-size:26px;margin:0}
+    .sub{margin:2px 0 0;color:var(--muted)}
+
+    .toolbar{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0 26px}
+    .pill{padding:8px 12px;border:1px solid rgba(255,255,255,.1);border-radius:999px;color:var(--muted);font-size:13px}
+
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    @media (max-width:960px){.grid{grid-template-columns:repeat(2,1fr)}}
+    @media (max-width:640px){.grid{grid-template-columns:1fr}}
+
+    .card{position:relative;background:linear-gradient(180deg,#10182a,#0e1526);
+      border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:16px;overflow:hidden;
+      box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .card h3{margin:4px 0 8px;font-size:18px}
+    .card p{margin:0;color:var(--muted);font-size:14px;min-height:40px}
+    .card .meta{display:flex;justify-content:space-between;align-items:center;margin-top:14px}
+    .btn{appearance:none;border:0;cursor:pointer;padding:10px 14px;border-radius:12px;font-weight:800;
+      color:#06121a;background:linear-gradient(135deg,var(--acc),#14c38e);box-shadow:0 8px 24px rgba(20,195,142,.3)}
+    .ghost{background:transparent;color:var(--text);border:1px dashed rgba(255,255,255,.18);box-shadow:none}
+    .badge{display:inline-block;padding:4px 8px;border-radius:999px;font-size:12px;font-weight:700;border:1px solid rgba(255,255,255,.18)}
+    .ready{background:rgba(107,227,167,.16);color:#b7ffe0;border-color:rgba(107,227,167,.45)}
+    .soon{background:rgba(142,203,255,.14);color:#cfe6ff;border-color:rgba(142,203,255,.42)}
+
+    .foot{margin-top:28px;color:var(--muted);font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    a{color:#a8d4ff;text-decoration:none}
+    .card a{display:inline-block}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="logo">SS</div>
+      <div>
+        <h1>SkySoft AI Hub</h1>
+        <div class="sub">All signal tools in one place • pick a game and launch a bot</div>
+      </div>
+    </header>
+
+    <div class="toolbar">
+      <div class="pill">Promo ready</div>
+      <div class="pill">Mobile‑first</div>
+      <div class="pill">No install</div>
+      <div class="pill">Single‑repo structure</div>
+    </div>
+
+    <section class="grid">
+      <!-- Aviator -->
+      <div class="card">
+        <div class="badge ready">READY</div>
+        <h3>SkySoft Aviator</h3>
+        <p>Personalized timing • Safe / High‑Risk modes • System sync • Analyst notes.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/aviator/" target="_self">Open bot</a>
+          <a class="ghost" href="#aviator-docs" title="How to use">Guide</a>
+        </div>
+      </div>
+
+      <!-- JetX -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft JetX</h3>
+        <p>Dual‑bet flow • time window predictions • mid‑run cashout guidance.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/jetx/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Mines -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Mines</h3>
+        <p>1‑bomb method • safe tile mapping • disciplined cashouts.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/mines/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Plinko -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Plinko</h3>
+        <p>Low/Medium/High risk lanes • auto‑drop cycles • volatility hints.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/plinko/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Penalty Shootout -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Penalty</h3>
+        <p>Angle patterns • left/right/center cycles • momentum cues.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/penalty/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Chicken Road -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Chicken Road</h3>
+        <p>3‑4 step collect‑and‑exit • rhythm reading • pattern guard.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/chicken/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Crash -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Crash</h3>
+        <p>Average crash window • 1.7–1.9x exits • loss‑recovery ladder.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/crash/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+
+      <!-- Sweet Bonanza -->
+      <div class="card">
+        <div class="badge soon">COMING SOON</div>
+        <h3>SkySoft Sweet Bonanza</h3>
+        <p>Ante mode • scatter frequency watch • bonus‑buy timing.</p>
+        <div class="meta">
+          <a class="btn" href="./bots/sweet-bonanza/" target="_self">Open bot</a>
+          <span class="ghost">Template ready</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="foot">
+      <div>Put each bot at <code>/bots/&lt;name&gt;/index.html</code>. Aviator is live already.</div>
+      <div>© SkySoft AI</div>
+    </div>
+  </div>
+</body>
+</html>
